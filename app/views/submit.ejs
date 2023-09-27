@@ -1,0 +1,38 @@
+<% /* %>
+ * Author: Kwok Wing Tang
+ * File: submit.ejs
+ * Date: 2023-09-27
+<% */ %>
+
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+
+<script>
+//redirect to homepage after 5 seconds
+var timer = 0;
+function startRedirect() {
+  timer = setTimeout(function () {
+    window.location.replace("../");
+  }, 5000);
+}
+</script>
+   
+
+<main class="container">
+  <div class="jumbotron">
+    </div>
+    <h4>Your form has saved.</h4>
+    <img src="img/submit_image1.jpg" >
+    <p>You will be redirected to the homepage or click <a href="/">here<i class="fa-solid fa-house-chimney-window"></i></a> to go to the homepage.</p>
+    <br>
+    <br>
+    <iframe onload="startRedirect()" ></iframe>
+    </main>
+    
+    <!--bottom nav-->
+    
+   
+   
+      <!--script section-->
+      <%- include ('partials/bottom_nav.ejs') %>
+      <%- include ('partials/footer.ejs') %>
