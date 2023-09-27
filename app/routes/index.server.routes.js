@@ -8,7 +8,6 @@ var router = express.Router();
 const fs = require('fs');
 
 /* GET home page. */
-
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
@@ -29,6 +28,7 @@ router.get('/contact', function(req, res, next) {
 router.get('/services', function(req, res, next) {
   res.render('services', { title: 'My Services' });
 });
+//form handling
 router.post('/submit', function(req, res, next) {
   //path to save message
   var file = "./database/messages.txt";
