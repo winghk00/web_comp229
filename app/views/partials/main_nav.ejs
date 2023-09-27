@@ -5,10 +5,18 @@
 <% */ %>
 <!--Main Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    
+<!-- Top Navigation Menu -->
+<script>
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
    
-    <!--<a class="navbar-brand" href="#">COMP229</a>-->
     <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>-->
@@ -71,5 +79,19 @@
         </ul>
         </b>
     </div>
+  </div>
+  <div class="topnav">
+    <a href="/" class="active">H</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
 </nav>
